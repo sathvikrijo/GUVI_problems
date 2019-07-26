@@ -1,5 +1,6 @@
 #include<iostream>
 #include<map>
+#include<vector>
 using namespace std;
 
 int main()
@@ -18,8 +19,11 @@ int main()
     
     for(int itr=0; itr<size; itr++)
     {
-        if(count[num[itr]] > 1)
-            cout<<num[itr]<<" ";
+        if(count[input[itr]] > 1)
+        {
+            cout<<input[itr]<<" ";
+            input.erase(input[itr]);
+        }
     }
     return 0;
 }
