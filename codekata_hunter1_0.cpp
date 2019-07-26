@@ -8,12 +8,18 @@ int main()
     map<int, int> count;
     
     cin>>size;
+    vector<int> input;
     for(int times=0; times<size; times++)
     {
         cin>>num;
-        if(count[num] > 0)
-            cout<<num<<" ";
-        else
-            count[num] = 1; 
+        count[num]++; 
+        input.push_back(num);
     }
+    
+    for(int itr=0; itr<size; itr++)
+    {
+        if(count[num[itr]] > 1)
+            cout<<num[itr]<<" ";
+    }
+    return 0;
 }
