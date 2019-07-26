@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     int size, num;
+    bool unique = true;
     map<int, int> count;
     
     cin>>size;
@@ -21,9 +22,12 @@ int main()
     {
         if(count[input[itr]] > 1)
         {
+            unqiue = false;
             cout<<input[itr]<<" ";
             input.erase(input[itr]);
         }
     }
+    if(unique)
+        cout<<"unique";
     return 0;
 }
